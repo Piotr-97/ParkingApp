@@ -1,12 +1,15 @@
 package s18746.parking.parkingreservation;
 
-
+import java.util.Set;
 import jakarta.persistence.*;
+
+
 
 import java.math.BigDecimal;
 
 
 @Entity
+@Table(name = "parkingspace")
 public class ParkingSpace {
 
     @Id
@@ -19,6 +22,8 @@ public class ParkingSpace {
     @Enumerated
     private Status status;
     private String localization;
+    @OneToMany(mappedBy = "parkingSpace")
+    private Set<Reservation> reservations;
 
 
 
