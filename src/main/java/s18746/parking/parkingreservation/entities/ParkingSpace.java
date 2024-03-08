@@ -1,8 +1,8 @@
-package s18746.parking.parkingreservation;
+package s18746.parking.parkingreservation.entities;
 
 import java.util.Set;
 import jakarta.persistence.*;
-
+import s18746.parking.parkingreservation.ParkingSpaceType;
 
 
 import java.math.BigDecimal;

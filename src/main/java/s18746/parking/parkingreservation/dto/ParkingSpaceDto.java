@@ -1,4 +1,7 @@
-package s18746.parking.parkingreservation;
+package s18746.parking.parkingreservation.dto;
+
+import s18746.parking.parkingreservation.entities.ParkingSpace;
+import s18746.parking.parkingreservation.ParkingSpaceType;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

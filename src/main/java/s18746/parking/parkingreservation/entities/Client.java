@@ -1,4 +1,4 @@
-package s18746.parking.parkingreservation;
+package s18746.parking.parkingreservation.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
