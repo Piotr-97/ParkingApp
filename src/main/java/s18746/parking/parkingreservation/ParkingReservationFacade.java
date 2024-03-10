@@ -2,6 +2,7 @@ package s18746.parking.parkingreservation;
 
 
 import lombok.AllArgsConstructor;
+import s18746.parking.parkingreservation.entities.ParkingSpace;
 
 @AllArgsConstructor
 public class ParkingReservationFacade {
