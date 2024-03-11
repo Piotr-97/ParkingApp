@@ -1,21 +1,23 @@
 package s18746.parking.parkingspacetimecounter;
 
-import lombok.AllArgsConstructor;
-import s18746.parking.parkingreservation.entities.Reservation;
+import s18746.parking.parkingreservation.dto.ReservationDto;
 
 
 import java.time.LocalDateTime;
 
 
-@AllArgsConstructor
 public class ParkingSpaceTimeCounterFacade {
 
     private final TimeCounter timeCounter;
 
+    public ParkingSpaceTimeCounterFacade(TimeCounter timeCounter) {
+        this.timeCounter = timeCounter;
+    }
 
-    public Long calculateDifferencesBetweenDatesInReservation(Reservation reservation){
-        LocalDateTime startDate = reservation.getReservationStart();
-        LocalDateTime endDate = reservation.getReservationEnd();
+
+    public Long calculateDifferencesBetweenDatesInReservation(ReservationDto reservationDto){
+        LocalDateTime startDate = reservationDto.reservationStart();
+        LocalDateTime endDate = reservationDto.reservationEnd();
         return timeCounter.calculateTimeDifferencesInReservation(startDate,endDate);
     }
 
