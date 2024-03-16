@@ -21,5 +21,4 @@ public class ParkingSpaceTimeCounterFacade {
         return timeCounter.calculateTimeDifferencesInReservation(startDate,endDate);
     }
 
-
 }

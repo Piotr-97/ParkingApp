@@ -1,14 +1,29 @@
 package s18746.parking.parkingreservation;
 
 
-import lombok.AllArgsConstructor;
-import s18746.parking.parkingreservation.entities.ParkingSpace;
+import s18746.parking.parkingreservation.dto.ClientDto;
+import s18746.parking.parkingreservation.dto.ParkingSpaceDto;
+import s18746.parking.parkingreservation.repositories.ParkingSpaceRepository;
 
-@AllArgsConstructor
+
 public class ParkingReservationFacade {
 
     private final ParkingSpaceReserver parkingSpaceReserver;
-    private final ParkingSpaceFreeer parkingSpaceFreeer;
+    private final ParkingSpaceFreer parkingSpaceFreer;
+    private final ParkingSpaceRepository parkingSpaceRepository;
+    public final ReservationCreator reservationCreator;
+
+    public ParkingReservationFacade(ParkingSpaceReserver parkingSpaceReserver, ParkingSpaceFreer parkingSpaceFreer, ParkingSpaceRepository parkingSpaceRepository, ReservationCreator reservationCreator) {
+        this.parkingSpaceReserver = parkingSpaceReserver;
+        this.parkingSpaceFreer = parkingSpaceFreer;
+        this.parkingSpaceRepository = parkingSpaceRepository;
+        this.reservationCreator = reservationCreator;
+    }
+
+    public void reserveParkingSpot(ClientDto clientDto, ParkingSpaceDto parkingSpaceDto){
+
+    }
+
 
     public Boolean reservePlace(){
 
@@ -18,7 +33,6 @@ public class ParkingReservationFacade {
     public Boolean freeUpPlace(){
         return null;
     }
-
 
 
 }
