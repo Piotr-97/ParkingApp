@@ -21,7 +21,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private UUID clientUniqueId;
+    private String clientUniqueId;
 
     private String firstname;
 
